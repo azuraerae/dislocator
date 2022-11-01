@@ -5,38 +5,38 @@ interface filters {
     maxUsers: number;
 }
 
-export interface Description {
-    word:       string;
-    phonetics:  Phonetic[];
-    meanings:   Meaning[];
-    license:    License;
+type Description = {
+    word: string;
+    phonetics?: Phonetic[];
+    meanings?: Meaning[];
+    license: License;
     sourceUrls: string[];
 }
 
-export interface License {
+type License = {
     name: string;
-    url:  string;
+    url: string;
 }
 
-export interface Meaning {
-    partOfSpeech: string;
-    definitions:  Definition[];
-    synonyms:     string[];
-    antonyms:     string[];
+type Meaning = {
+    partOfSpeech?: string;
+    definitions?:  Definition[];
+    synonyms?: string[];
+    antonyms?: string[];
 }
 
-export interface Definition {
-    definition: string;
-    synonyms:   any[];
-    antonyms:   any[];
-    example?:   string;
+type Definition = {
+    definition?: string;
+    synonyms?: string[];
+    antonyms?: string[];
+    example?: string;
 }
 
-export interface Phonetic {
-    audio:      string;
+type Phonetic = {
+    audio?: string;
     sourceUrl?: string;
-    license?:   License;
-    text?:      string;
+    license?: License;
+    text?: string;
 }
 
 
@@ -87,7 +87,9 @@ export class Parser {
         if (typeof data === "number") {
             console.log(data.toString())
         } else {
-            
+            if(data.meanings){
+                
+            }
         }
         return synonyms;
     }
