@@ -1,0 +1,22 @@
+{
+  "name": "dislocator",
+  "version": "1.0.0",
+  "description": "A Discord Vanity URL Parser!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azuraerae/dislocator.git"
+  },
+  "keywords": [
+    "Discord"
+  ],
+  "author": "Azuraerae",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/azuraerae/dislocator/issues"
+  },
+  "homepage": "https://github.com/azuraerae/dislocator#readme"
+}
