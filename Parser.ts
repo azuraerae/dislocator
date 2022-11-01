@@ -83,12 +83,23 @@ export class Parser {
 
     private static async getAllSynonyms(word: string): Promise<string[]> {
         let synonyms: string[] = [];
+        let temp: string[] = [];
         let data: Description | number = await this.getDescription(word)
         if (typeof data === "number") {
             console.log(data.toString())
         } else {
             if(data.meanings){
-                
+                //Parse through the entirety of the data received
+                let d: Meaning[] = data.meanings
+                for(let val in d){
+                    if(val == "synonyms"){temp.concat(val)};  
+                }
+
+                for(let val of d){
+                    if(val == "Definition"){
+                        if(val.synonyms){temp.concat(val.synonyms)};
+                    };
+                }
             }
         }
         return synonyms;
