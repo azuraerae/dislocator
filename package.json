@@ -4,6 +4,7 @@
   "description": "A Discord Vanity URL Parser!",
   "main": "index.js",
   "scripts": {
+    "start": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
