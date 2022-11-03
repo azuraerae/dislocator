@@ -1,4 +1,4 @@
-import axios, { Axios } from 'axios';
+import axios from 'axios';
 
 interface filters {
     minUsers: number;
@@ -55,8 +55,10 @@ class data {
 export class Parser {
     static synonymsLink: string = "https://api.dictionaryapi.dev/api/v2/entries/en/";
     static apiLink: string = "https://discord.com/api/v9/invites/";
-    keyword: string;
-    filters: filters;
+
+    constructor() {
+        
+    }
 
     private static async getDescription(word: string) {
         let request: string = this.synonymsLink.concat(word.toString());
@@ -112,14 +114,9 @@ export class Parser {
         return result;
     }
 
-    public fetch(): data[] {
+    public fetch(keyword: string): data[] {
         let results: data[] = [];
 
         return results;
-    }
-
-    constructor(keyword: string, filters: filters) {
-        this.keyword = keyword;
-        this.filters = filters;
     }
 }
